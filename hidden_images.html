@@ -1,0 +1,33 @@
+<!--SC 7th Hidden Images-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Images</title>
+<script>
+    showing = "none"
+    function show(){
+        if (showing == "none"){
+            document.getElementById("hidden").style.display = "block"
+            showing="block"
+            document.getElementById("button").innerHTML = "show less"
+        }else{
+             document.getElementById("hidden").style.display = "none"
+            showing="none"
+            document.getElementById("button").innerHTML = "show more"
+        }
+        
+    }
+</script>
+</head>
+<body>
+    <h1 onmouseover={show()}>Image</h1>
+    <div id="content-wrapper">
+    <div id="left">
+    <div id="hidden">
+        <img src="https://myconsciouseating.com/wp-content/uploads/2025/01/mcdonalds-mocha-frappe-in-a-glass.jpg">
+    </div>
+    </div>
+</body>
+</html>
