@@ -4,18 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capitol Reef!</title>
+    <style>
+        body {
+            background-color: #eff1ff;
+            font-family:cursive, fantasy, arial, sans-serif;
+            margin: 30px;
+        }
+        h1 {
+            color: #607dae;
+        }
+        h2{
+            color: #404f78;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        #About! {
+            margin-bottom: 30px;
+            color: #516486;
+        }
+        #why {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        ul {
+            color: #516486;
+            list-style-type: square;
+        }
+        #image, #image2, #image3 {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+        }
+    </style>
+    <script>
+        images = ["https://cdn.5280.com/2018/07/Captiol-Reef_Austin-Cronnelly-Tandemstock-1600x1200.jpg"]
+        index = 0
+        function change(){
+            document.getElementById("one").src = images[index];
+            index += 1
+            if(index>= images.length){
+                index = 0
+            }
+        }
+          showing = "none"
+    function show(){
+        if (showing == "none"){
+            document.getElementById("hidden").style.display = "block"
+            showing="block"
+            document.getElementById("button").innerHTML = "show less"
+        }else{
+             document.getElementById("hidden").style.display = "none"
+            showing="none"
+            document.getElementById("button").innerHTML = "show more"
+        }
+        
+    }
+    </script>
 </head>
 <body>
     <span id="image">
-            <img src="https://wildlandtrekking.com/content/uploads/2025/05/Capitol-reef.jpg" width="150px">
+            <img src="https://wildlandtrekking.com/content/uploads/2025/05/Capitol-reef.jpg" width="250px">
         </span>
-    <h1>Capitol Reef National Park!</h1>
+    <h1 onmouseover={show()}>Capitol Reef National Park!</h1>
+    <div id="content-wrapper">
+    <div id="left">
+    <div id="hidden">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM0sTPI_lqtPXVKR7rqwEAbR2b0D7Q5qLh0Q&s" width="250px">
+        <p>Capitol Reef National Park has a bunch of pretyt views, especially that one right there. At night you can see all of the pretty stars in the sky because there is no light pollution. With how many staars you can see during the night time, you can see the MilkyWay galaxy and so much more. Capitol Reef is really pretty at night and if you have ever been, you know how pretty it is. The night being so clear and the stars being so visible, makes it really easy to stargaze while camping and everything while you are there</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS-mNfjbwuQtBDrpW_t16gNsaUnoND3_TbxA&s" width="250px">
+    </div>
+    </div>
+    <h2>About!</h2>
     <div id="About!">
-        <p>Capitol Reef is a national park in Southern-Central Utah that is roughly 60 miles long and 6 miles wide. Capitol Reef is filled with red rocks that tower over everyone and everything. Captiol Reef has a bunch of petroglyphs that cover the sides and "walls" of the big red rocks; petroglyphs are etchings that are carved into rock walls, these ones in particular are made by the fremont and Ancestral Puebloan people and they told their stories through petroglyphs. Things you are able to do in Capitol Reef can range from camping, hiking, cayonerring and slot canyon hikes, scenic drives along Utah highway 24, and even more!</p>
+        <p>Capitol Reef is a national park in Southern-Central Utah that is roughly 60 miles long and 6 miles wide. Capitol Reef is filled with red rocks that tower over everyone and everything. Captiol Reef has a bunch of petroglyphs that cover the sides and "walls" of the big red rocks; petroglyphs are etchings that are carved into rock walls, these ones in particular are made by the fremont and Ancestral Puebloan people and they told their stories through petroglyphs. Things you are able to do in Capitol Reef can range from camping, hiking, cayoneering and slot canyon hikes, scenic drives along Utah highway 24, and even more! Captiol Reef has a bunch of different places to hike and everything else that was stated before.</p>
     </div>
     <div id="img">
         <span id="image2">
-            <img src="https://cdn.5280.com/2018/07/Captiol-Reef_Austin-Cronnelly-Tandemstock-1600x1200.jpg" width="250px">
+            <img id = "one onmouseover = {change()} src="https://cdn.5280.com/2018/07/Captiol-Reef_Austin-Cronnelly-Tandemstock-1600x1200.jpg" width="250px">
+        </span>
+    </div>
+    <h2>Why You Should Visit Captiol Reef</h2>
+    <div id="why">
+        <ul>
+            <li>It has a bunch of petroglyphs that are really pretty</li>
+            <li>Water hikes that you can go on through riverbeds and it is normally called the best water hike in all of Utah</li>
+            <li>It has a way less crowded landscapes that someone can visit</li>
+            <li>There are unique history with gorgous pioneer orchards</li>
+            <li>Gifford House pies, Gifford House has the absolute best pies and everyone loves them, maybe even you!</li>
+            <li>You can explore the massive Waterpocket Fold</li>
+            <li>You can hike the Hickman Bridge or even the Cassidy Arch</li>
+            <li>You can drive the Burr Trail Switchbacks</li>
+            <li>You are also able to see the Sunset Point of Captiol Reef and it is really pretty</li>
+        </ul>
+    </div>
+    <div id="image3">
+        <span id="image3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS0h2TPLOq96K6hJWsym73AprGH6EIlmBTtQ&s" width="250px">
         </span>
     </div>
 </body>
