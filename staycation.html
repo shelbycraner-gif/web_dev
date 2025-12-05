@@ -18,7 +18,12 @@
             margin-top: 30px;
             margin-bottom: 30px;
         }
-        #About! {
+        #content {
+            display: grid;
+            grid-template-columns: repeat(3, 2fr);
+            margin-top: 20px;
+        }
+        #About {
             margin-bottom: 30px;
             color: #516486;
         }
@@ -61,45 +66,54 @@
     </script>
 </head>
 <body>
-    <span id="image">
+    <div id="content">
+        <span id="image">
             <img src="https://wildlandtrekking.com/content/uploads/2025/05/Capitol-reef.jpg" width="250px">
         </span>
-    <h1 onmouseover={show()}>Capitol Reef National Park!</h1>
-    <div id="content-wrapper">
-    <div id="left">
-    <div id="hidden">
+        <h1 onclick={show()}>Capitol Reef National Park!(Click Me)</h1>
+        <div id="content-wrapper">
+        <div id="left">
+        <div id="hidden">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM0sTPI_lqtPXVKR7rqwEAbR2b0D7Q5qLh0Q&s" width="250px">
-        <p>Capitol Reef National Park has a bunch of pretyt views, especially that one right there. At night you can see all of the pretty stars in the sky because there is no light pollution. With how many staars you can see during the night time, you can see the MilkyWay galaxy and so much more. Capitol Reef is really pretty at night and if you have ever been, you know how pretty it is. The night being so clear and the stars being so visible, makes it really easy to stargaze while camping and everything while you are there</p>
+        <p>Capitol Reef National Park has a bunch of pretty views, especially that one right there. At night you can see all of the pretty stars in the sky because there is no light pollution. With how many staars you can see during the night time, you can see the MilkyWay galaxy and so much more. Capitol Reef is really pretty at night and if you have ever been, you know how pretty it is. The night being so clear and the stars being so visible, makes it really easy to stargaze while camping and everything while you are there</p>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS-mNfjbwuQtBDrpW_t16gNsaUnoND3_TbxA&s" width="250px">
-    </div>
-    </div>
-    <h2>About!</h2>
-    <div id="About!">
-        <p>Capitol Reef is a national park in Southern-Central Utah that is roughly 60 miles long and 6 miles wide. Capitol Reef is filled with red rocks that tower over everyone and everything. Captiol Reef has a bunch of petroglyphs that cover the sides and "walls" of the big red rocks; petroglyphs are etchings that are carved into rock walls, these ones in particular are made by the fremont and Ancestral Puebloan people and they told their stories through petroglyphs. Things you are able to do in Capitol Reef can range from camping, hiking, cayoneering and slot canyon hikes, scenic drives along Utah highway 24, and even more! Captiol Reef has a bunch of different places to hike and everything else that was stated before.</p>
-    </div>
-    <div id="img">
-        <span id="image2">
-            <img id = "one onmouseover = {change()} src="https://cdn.5280.com/2018/07/Captiol-Reef_Austin-Cronnelly-Tandemstock-1600x1200.jpg" width="250px">
-        </span>
-    </div>
-    <h2>Why You Should Visit Captiol Reef</h2>
-    <div id="why">
-        <ul>
-            <li>It has a bunch of petroglyphs that are really pretty</li>
-            <li>Water hikes that you can go on through riverbeds and it is normally called the best water hike in all of Utah</li>
-            <li>It has a way less crowded landscapes that someone can visit</li>
-            <li>There are unique history with gorgous pioneer orchards</li>
-            <li>Gifford House pies, Gifford House has the absolute best pies and everyone loves them, maybe even you!</li>
-            <li>You can explore the massive Waterpocket Fold</li>
-            <li>You can hike the Hickman Bridge or even the Cassidy Arch</li>
-            <li>You can drive the Burr Trail Switchbacks</li>
-            <li>You are also able to see the Sunset Point of Captiol Reef and it is really pretty</li>
-        </ul>
-    </div>
-    <div id="image3">
-        <span id="image3">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS0h2TPLOq96K6hJWsym73AprGH6EIlmBTtQ&s" width="250px">
-        </span>
-    </div>
+        </div>
+        </div>
+        <div id="content-wrapper2">
+            <div id="pictures">
+                <img id="hover" src="https://uprootedtraveler.com/wp-content/uploads/uprooted-traveler-one-day-in-capitol-reef-itinerary-cassidy-arch.jpg" width="250px" onmouseover="this.src='https://capitolreefcountry.com/wp-content/uploads/2025/03/NighSky-Stars-CapitolReefCountry-scaled.jpg'"
+                onmouseout="this.src='https://uprootedtraveler.com/wp-content/uploads/uprooted-traveler-one-day-in-capitol-reef-itinerary-cassidy-arch.jpg'">
+            </div>
+        </div>
+        <h2>About</h2>
+        <div id="About!">
+            <p>Capitol Reef is a national park in Southern-Central Utah that is roughly 60 miles long and 6 miles wide. Capitol Reef is filled with red rocks that tower over everyone and everything. Captiol Reef has a bunch of petroglyphs that cover the sides and "walls" of the big red rocks; petroglyphs are etchings that are carved into rock walls, these ones in particular are made by the fremont and Ancestral Puebloan people and they told their stories through petroglyphs. Things you are able to do in Capitol Reef can range from camping, hiking, cayoneering and slot canyon hikes, scenic drives along Utah highway 24, and even more! Captiol Reef has a bunch of different places to hike and everything else that was stated before.</p>
+        </div>
+        <div id="img">
+            <span id="image2">
+                <img src="https://cdn.5280.com/2018/07/Captiol-Reef_Austin-Cronnelly-Tandemstock-1600x1200.jpg" width="250px">
+            </span>
+        </div>
+        <h2>Why You Should Visit Captiol Reef</h2>
+        <div id="why">
+            <ul>
+                <li>It has a bunch of petroglyphs that are really pretty</li>
+                <li>Water hikes that you can go on through riverbeds and it is normally called the best water hike in all of Utah</li>
+                <li>It has a way less crowded landscapes that someone can visit</li>
+                <li>There are unique history with gorgous pioneer orchards</li>
+                <li>Gifford House pies, Gifford House has the absolute best pies and everyone loves them, maybe even you!</li>
+                <li>You can explore the massive Waterpocket Fold</li>
+                <li>You can hike the Hickman Bridge or even the Cassidy Arch</li>
+                <li>You can drive the Burr Trail Switchbacks</li>
+                <li>You are also able to see the Sunset Point of Captiol Reef and it is really pretty</li>
+            </ul>
+        </div>
+        <div id="image3">
+            <span id="image3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS0h2TPLOq96K6hJWsym73AprGH6EIlmBTtQ&s" width="250px">
+            </span>
+        </div>
+        </div>
+    
 </body>
 </html>
